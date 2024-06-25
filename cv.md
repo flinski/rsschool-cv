@@ -28,3 +28,15 @@ function findDifference(a, b) {
 	return Math.abs(a.reduce((v, el) => v * el, 1) - b.reduce((v, el) => v * el, 1));
 }
 ```
+
+## Courses
+
+- [RS School Frontend](https://rs.school/js/)
+- [W3Schools HTML, CSS](https://www.w3schools.com/)
+- [Learn JavaScript](https://javascript.info/)
+- [The Complete JavaScript Course](https://www.udemy.com/course/the-complete-javascript-course/)
+
+## Languages
+
+- **English** – A2 Pre-intermediate
+- **Russian** – Native
