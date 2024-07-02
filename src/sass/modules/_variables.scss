@@ -1,31 +1,25 @@
-@use "functions" as func;
-@use "mixins" as mixin;
-@use "media" as media;
+@use 'functions' as func;
+@use 'mixins' as mixin;
+@use 'media' as media;
 
 :root {
-	--color-dark: #191a23;
-	--color-dark-alt: #292a32;
-	--color-light: #ffffff;
-	--color-accent: #b9ff66;
-	--color-gray: #f3f3f3;
-	--color-gray-alt: #898989;
+	color-scheme: dark;
 
-	--border: #{func.rem(1)} solid var(--color-dark);
-	--border-radius: #{func.rem(14)};
-	--border-radius-small: #{func.rem(7)};
-	--border-radius-large: #{func.rem(45)};
+	--color-dark: hsl(0 0 0);
+	--color-light: hsl(0 0 90);
+	--color-gray: hsl(0 0 70);
+	--color-bg1: hsl(0 0 0 / 0.1);
+	--color-bg2: hsl(0 0 70 / 0.1);
 
-	--shadow: 0 #{func.rem(5)} 0 0 var(--color-dark);
+	--border-radius: #{func.rem(8)};
 
-	--font-family-primary: "Space Grotesk", sans-serif;
+	--font-family: 'Inter', system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif,
+		'Apple Color Emoji', 'Segoe UI Emoji', sans-serif;
 
-	--container-width: #{func.rem(1240)};
-	--container-padding-inline: #{func.rem(20)};
+	--container-width: #{func.rem(800)};
+	--container-padding-x: #{func.rem(20)};
 
-	--section-padding-block: #{func.rem(70)};
-
-	--input-height: #{func.rem(59)};
-	--button-height: #{func.rem(68)};
+	--button-height: #{func.rem(40)};
 
 	--transition-duration: 0.2s;
 }

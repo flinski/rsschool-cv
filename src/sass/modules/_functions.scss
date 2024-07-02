@@ -1,4 +1,4 @@
-@use "sass:math";
+@use 'sass:math';
 
 // calc(10px + (40 - 10) * ((100vw - 320px) / (1440 - 320)))
 @function fluid($minSize, $maxSize, $minWidth, $maxWidth) {
@@ -29,7 +29,9 @@
 	// do calculations
 	$delta: $maxSize - $minSize;
 
-	@return calc(#{$minSize * 1rem} + #{$delta} * ((100vw - #{$minWidth * 1rem}) / (#{$maxWidth} - #{$minWidth})));
+	@return calc(
+		#{$minSize * 1rem} + #{$delta} * ((100vw - #{$minWidth * 1rem}) / (#{$maxWidth} - #{$minWidth}))
+	);
 }
 
 @function pct($px-1, $px-2) {

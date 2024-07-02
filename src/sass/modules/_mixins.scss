@@ -1,11 +1,9 @@
-@use "sass:math";
+@use 'sass:math';
 
 @mixin font-face($fontFamily, $path, $fontWeight, $fontStyle) {
 	@font-face {
-		font-family: "#{$fontFamily}";
-		src:
-			url("#{$path}.woff2") format("woff2"),
-			url("#{$path}.woff") format("woff");
+		font-family: '#{$fontFamily}';
+		src: url('#{$path}.woff2') format('woff2'), url('#{$path}.woff') format('woff');
 		font-weight: $fontWeight;
 		font-style: $fontStyle;
 		font-display: swap;

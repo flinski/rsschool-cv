@@ -1,10 +1,13 @@
-@use "modules/functions";
-@use "modules/mixins";
-@use "modules/media";
+@use 'modules/functions';
+@use 'modules/mixins';
+@use 'modules/media';
 
-@use "modules/fonts";
-@use "modules/variables";
-@use "modules/normalize";
-@use "modules/globals";
-@use "modules/typography";
-@use "modules/utils";
+@use 'modules/fonts';
+@use 'modules/variables';
+@use 'modules/normalize';
+@use 'modules/globals';
+@use 'modules/typography';
+@use 'modules/utils';
+
+@use 'components/toggle-theme';
+@use 'components/header';
