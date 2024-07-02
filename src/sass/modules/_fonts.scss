@@ -1,0 +1,7 @@
+@use "functions" as func;
+@use "mixins" as mixin;
+@use "media" as media;
+
+// &display=swap
+// &subset=cyrillic-ext
+// @include mixin.font-face("fontFamily", "fileName", fontWeight, fontStyle);

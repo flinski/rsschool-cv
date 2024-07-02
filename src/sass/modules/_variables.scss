@@ -1,0 +1,31 @@
+@use "functions" as func;
+@use "mixins" as mixin;
+@use "media" as media;
+
+:root {
+	--color-dark: #191a23;
+	--color-dark-alt: #292a32;
+	--color-light: #ffffff;
+	--color-accent: #b9ff66;
+	--color-gray: #f3f3f3;
+	--color-gray-alt: #898989;
+
+	--border: #{func.rem(1)} solid var(--color-dark);
+	--border-radius: #{func.rem(14)};
+	--border-radius-small: #{func.rem(7)};
+	--border-radius-large: #{func.rem(45)};
+
+	--shadow: 0 #{func.rem(5)} 0 0 var(--color-dark);
+
+	--font-family-primary: "Space Grotesk", sans-serif;
+
+	--container-width: #{func.rem(1240)};
+	--container-padding-inline: #{func.rem(20)};
+
+	--section-padding-block: #{func.rem(70)};
+
+	--input-height: #{func.rem(59)};
+	--button-height: #{func.rem(68)};
+
+	--transition-duration: 0.2s;
+}

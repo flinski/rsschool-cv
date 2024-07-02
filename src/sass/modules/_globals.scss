@@ -1,0 +1,21 @@
+@use "functions" as func;
+@use "mixins" as mixin;
+@use "media" as media;
+
+body {
+	font-family: var(--font-family-primary);
+	font-size: func.fluid(16, 18, 360, 1440);
+	font-weight: 400;
+	line-height: 1.5;
+
+	color: var(--color-dark);
+	background-color: var(--color-light);
+}
+
+a,
+button,
+input,
+textarea,
+svg * {
+	transition-duration: var(--transition-duration);
+}
