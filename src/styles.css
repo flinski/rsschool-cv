@@ -205,6 +205,7 @@ p {
 }
 
 .wrapper {
+  position: relative;
   min-height: 100%;
   overflow: hidden;
 }
@@ -240,6 +241,34 @@ p {
   }
 }
 
+#stars {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+
+.star {
+  position: absolute;
+  background: #fff;
+  border-radius: 50%;
+  aspect-ratio: 1;
+  animation: shimmering 3s infinite ease-in-out;
+}
+
+@keyframes shimmering {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 1;
+  }
+}
 .toggle-theme {
   height: var(--button-height);
   aspect-ratio: 1;
