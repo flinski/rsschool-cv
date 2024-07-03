@@ -18,9 +18,6 @@
 									<a class="header__button button" href="#hero">Summary</a>
 								</li>
 								<li class="header__item">
-									<a class="header__button button" href="#contacts">Contacts</a>
-								</li>
-								<li class="header__item">
 									<a class="header__button button" href="#skills">Skills</a>
 								</li>
 								<li class="header__item">
@@ -33,7 +30,7 @@
 									<a class="header__button button" href="#education">Education</a>
 								</li>
 								<li class="header__item">
-									<a class="header__button button" href="#english">English</a>
+									<a class="header__button button" href="#languages">Languages</a>
 								</li>
 							</ul>
 						</nav>
@@ -42,14 +39,13 @@
 				</div>
 			</header>
 			<main class="main">
-				<section class="hero" id="hero">
+				<section class="section hero" id="hero">
 					<div class="hero__container container">
 						<div class="hero__body">
 							<div class="hero__text">
+								<span class="hero__description">Hi, my name is</span>
 								<h1 class="hero__heading">Vladislav Flinski</h1>
-								<p class="hero__description">Frontend Developer</p>
 								<p class="hero__summary">
-									Hi there 👋🏻 <br />
 									I am a frontend web developer. I like programming. It's fun and interesting. I
 									have several completed JavaScript training projects. Now I'm learning React to
 									become even better at development. I would like to work in a team with a good
@@ -68,57 +64,82 @@
 						</div>
 					</div>
 				</section>
-				<section class="skills" id="skills">
+				<section class="section skills" id="skills">
 					<div class="skills__container container">
 						<div class="skills__body">
-							<h2 class="skills__heading">Skills</h2>
+							<h2 class="skills__heading">Tools and technologies I possess</h2>
+							<p class="skills__description">
+								Below are the technologies and tools I use for web development and application
+								design.
+							</p>
 							<ul class="skills__list">
 								<li class="skills__item">
-									<button class="skills__button skills__button--red button" type="button">
-										HTML
-									</button>
+									<button class="skills__button button" type="button">HTML</button>
 								</li>
 								<li class="skills__item">
-									<button class="skills__button skills__button--blue button" type="button">
-										CSS
-									</button>
+									<button class="skills__button button" type="button">CSS</button>
 								</li>
 								<li class="skills__item">
-									<button class="skills__button skills__button--pink button" type="button">
-										SASS
-									</button>
+									<button class="skills__button button" type="button">SASS</button>
 								</li>
 								<li class="skills__item">
-									<button class="skills__button skills__button--cyan button" type="button">
-										BEM
-									</button>
+									<button class="skills__button button" type="button">BEM</button>
 								</li>
 								<li class="skills__item">
-									<button class="skills__button skills__button--yellow button" type="button">
-										JavaScript
-									</button>
+									<button class="skills__button button" type="button">JavaScript</button>
 								</li>
 								<li class="skills__item">
-									<button class="skills__button skills__button--blue button" type="button">
-										React
-									</button>
+									<button class="skills__button button" type="button">React</button>
 								</li>
 								<li class="skills__item">
-									<button class="skills__button skills__button--purple button" type="button">
-										Vite
-									</button>
+									<button class="skills__button button" type="button">Vite</button>
 								</li>
 								<li class="skills__item">
-									<button class="skills__button skills__button--zinc button" type="button">
-										Git, GitHub
-									</button>
+									<button class="skills__button button" type="button">Git, GitHub</button>
 								</li>
 								<li class="skills__item">
-									<button class="skills__button skills__button--green button" type="button">
-										Figma
-									</button>
+									<button class="skills__button button" type="button">Figma</button>
 								</li>
 							</ul>
+						</div>
+					</div>
+				</section>
+				<section class="section code" id="code">
+					<div class="code__container container">
+						<div class="code__body">
+							<h2 class="code__heading">Code sample from this project</h2>
+							<p class="code__description">
+								Here is a piece of code from that application. It is responsible for creating
+								animations on the page.
+							</p>
+							<div class="code__field">
+								<div class="code__field-heading">
+									<div class="code__circles">
+										<div class="code__circle code__circle--pink"></div>
+										<div class="code__circle code__circle--orange"></div>
+										<div class="code__circle code__circle--green"></div>
+									</div>
+									<div class="code__title">script.js</div>
+								</div>
+								<div class="code__field-body">
+									<pre class="code__code-wrapper">
+										<code class="code__code">
+export default defineConfig(({ command, mode, isSsrBuild, isPreview }) => {
+  if (command === 'serve') {
+    return {
+      // dev specific config
+    }
+  } else {
+    // command === 'build'
+    return {
+      // build specific config
+    }
+  }
+})
+										</code>
+									</pre>
+								</div>
+							</div>
 						</div>
 					</div>
 				</section>

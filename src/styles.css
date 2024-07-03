@@ -61,35 +61,27 @@
   font-style: normal;
   font-display: swap;
 }
+@font-face {
+  font-family: "JetBrains Mono";
+  src: url("./assets/fonts/JetBrainsMono-Regular.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
 :root {
   color-scheme: dark;
-  --color-background: hsl(0 0 7);
-  --color-text: hsl(0 0 90);
-  --color-text-dim: hsl(0 0 70);
-  --color-shade: hsl(0 0 7 / 0.1);
-  --color-glass: hsl(240 5 50 / 0.1);
-  --color-blue: hsl(212 92 58);
-  --color-blue-bg: hsl(212 92 58 / 0.1);
-  --color-purple: hsl(270 59 58);
-  --color-purple-bg: hsl(270 59 58 / 0.1);
-  --color-green: hsl(146 62 55);
-  --color-green-bg: hsl(146 62 55 / 0.1);
-  --color-red: hsl(339 90 61);
-  --color-red-bg: hsl(339 90 61 / 0.1);
-  --color-pink: hsl(317 100 72);
-  --color-pink-bg: hsl(317 100 72 / 0.1);
-  --color-yellow: hsl(37 91 64);
-  --color-yellow-bg: hsl(37 91 64 / 0.1);
-  --color-cyan: hsl(190 96 82);
-  --color-cyan-bg: hsl(190 96 82 / 0.1);
-  --color-zinc: hsl(240 5 65);
-  --color-zinc-bg: hsl(240 5 65 / 0.1);
+  --color-dark: hsl(240 4 9);
+  --color-background: hsl(240 7 11);
+  --color-shade: hsl(240 7 11 / 0.1);
+  --color-glass: hsl(240 7 50 / 0.1);
+  --color-text: hsl(0 0 100 / 0.9);
+  --color-text-dim: hsl(0 0 100 / 0.6);
   --border-radius: 0.5rem;
   --font-family: "Inter", system-ui, "Segoe UI", Roboto, Helvetica, Arial, sans-serif,
   	"Apple Color Emoji", "Segoe UI Emoji", sans-serif;
   --container-width: 50rem;
   --container-padding-x: 1.25rem;
-  --button-height: 2.5rem;
+  --button-height: 2.25rem;
   --transition-duration: 0.2s;
 }
 
@@ -157,16 +149,12 @@ svg * {
   transition-property: fill, stroke;
 }
 
-::-webkit-scrollbar {
-  display: none;
-}
-
 body {
   font-family: var(--font-family);
   font-size: clamp(1rem, 1rem + 0vw, 1rem);
   font-weight: 400;
-  line-height: 1.5;
-  color: var(--color-text-dim);
+  line-height: 1.75;
+  color: var(--color-text);
   background-color: var(--color-background);
 }
 
@@ -189,36 +177,26 @@ button {
   background-color: transparent;
 }
 
+pre,
+code {
+  font-family: "JetBrains Mono", monospace;
+}
+
 h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
+h2 {
   color: var(--color-text);
   font-weight: 600;
-  margin-top: 2rem;
+  line-height: 1.333;
+  text-transform: capitalize;
   margin-bottom: 1rem;
 }
 
 h1 {
-  font-size: clamp(1rem, -1.6251875rem + 11.6675vw, 4.2085625rem);
+  font-size: clamp(1rem, -0.6363636364rem + 7.2727272727vw, 3rem);
 }
 
 h2 {
-  font-size: clamp(1rem, -0.7650227273rem + 7.8445454545vw, 3.15725rem);
-}
-
-h3 {
-  font-size: clamp(1rem, -0.1197329545rem + 4.9765909091vw, 2.3685625rem);
-}
-
-h4 {
-  font-size: clamp(1rem, 0.364375rem + 2.825vw, 1.776875rem);
-}
-
-h5 {
-  font-size: clamp(1rem, 0.7275454545rem + 1.2109090909vw, 1.333rem);
+  font-size: clamp(1rem, 0.5909090909rem + 1.8181818182vw, 1.5rem);
 }
 
 p {
@@ -283,11 +261,15 @@ p {
   border-radius: var(--border-radius);
 }
 .toggle-theme:hover {
-  color: var(--c-text);
+  color: var(--color-text);
   background-color: var(--color-glass);
 }
 .toggle-theme:active {
   scale: 0.95;
+}
+
+.section {
+  margin-bottom: 4.6875rem;
 }
 
 .header {
@@ -297,7 +279,7 @@ p {
   width: 100%;
   padding-block: 0.625rem;
   background-color: var(--color-shade);
-  border: 1px solid var(--color-glass);
+  border: 0.0625rem solid var(--color-glass);
   backdrop-filter: blur(20px);
 }
 .header__body {
@@ -321,17 +303,19 @@ footer {
 }
 
 .hero {
-  margin-top: 8.125rem;
+  margin-top: 9.375rem;
 }
 .hero__body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  gap: 3.125rem;
+  gap: 5.3125rem;
 }
 .hero__description {
+  display: inline-block;
+  font-weight: 500;
   color: var(--color-text);
-  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
 }
 .hero__summary {
   margin-bottom: 0;
@@ -355,40 +339,68 @@ footer {
   align-items: center;
   flex-wrap: wrap;
   gap: 0.5rem;
-  max-width: 33.75rem;
+  max-width: 25rem;
 }
 .skills__button {
   cursor: default;
+  border: 0.0625rem solid var(--color-glass);
 }
-.skills__button--blue {
-  color: var(--color-blue);
-  background-color: var(--color-blue-bg);
+.skills__button:hover {
+  background-color: var(--color-glass);
 }
-.skills__button--purple {
-  color: var(--color-purple);
-  background-color: var(--color-purple-bg);
+
+.code__field {
+  background-color: var(--color-dark);
+  border-radius: var(--border-radius);
 }
-.skills__button--green {
-  color: var(--color-green);
-  background-color: var(--color-green-bg);
+.code__field-heading {
+  display: flex;
+  align-items: center;
+  padding-inline: 1rem;
+  padding-block: 0.625rem;
 }
-.skills__button--red {
-  color: var(--color-red);
-  background-color: var(--color-red-bg);
+.code__circles {
+  flex: 0 0 auto;
+  display: inline-flex;
+  column-gap: 0.75rem;
 }
-.skills__button--pink {
-  color: var(--color-pink);
-  background-color: var(--color-pink-bg);
+.code__circle {
+  width: 0.75rem;
+  aspect-ratio: 1;
+  border-radius: 50%;
 }
-.skills__button--yellow {
-  color: var(--color-yellow);
-  background-color: var(--color-yellow-bg);
+.code__circle--pink {
+  background-color: #f31260;
 }
-.skills__button--cyan {
-  color: var(--color-cyan);
-  background-color: var(--color-cyan-bg);
+.code__circle--orange {
+  background-color: #f5a524;
 }
-.skills__button--zinc {
-  color: var(--color-zinc);
-  background-color: var(--color-zinc-bg);
+.code__circle--green {
+  background-color: #17c964;
+}
+.code__title {
+  flex: 1 1 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-family: "JetBrains Mono", monospace;
+  font-size: 0.75rem;
+  line-height: 1.75;
+  margin-right: 3.75rem;
+  color: var(--color-text-dim);
+}
+.code__field-body {
+  margin-top: -12px;
+  padding-inline: 1.5rem;
+}
+.code__code-wrapper {
+  display: flex;
+}
+.code__code {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 0.875rem;
+  line-height: 1.75;
 }
