@@ -269,7 +269,7 @@ p {
 }
 
 .section {
-  margin-bottom: 4.6875rem;
+  padding-block: 2.5rem;
 }
 
 .header {
@@ -298,10 +298,6 @@ p {
   color: var(--color-text);
   background-color: var(--color-glass);
 }
-footer {
-  height: 5000px;
-}
-
 .hero {
   margin-top: 9.375rem;
 }
@@ -403,4 +399,48 @@ footer {
   align-items: center;
   font-size: 0.875rem;
   line-height: 1.75;
+}
+
+.projects__list {
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+}
+.projects__item {
+  position: relative;
+  flex: 0 0 calc((100% - 12px) / 4);
+  aspect-ratio: 1/3;
+}
+.projects__link:hover .projects__name {
+  height: 16%;
+  padding: 1rem;
+}
+.projects__link:hover .projects__image {
+  opacity: 1;
+}
+.projects__image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  opacity: 0.5;
+  transition: all 0.5s ease 0s;
+}
+.projects__name {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 0;
+  font-size: 1.5rem;
+  font-weight: 700;
+  line-height: 1.333;
+  text-transform: uppercase;
+  padding-left: 1rem;
+  overflow: hidden;
+  background-color: var(--color-dark);
+  transition: all 0.5s ease 0s;
 }
