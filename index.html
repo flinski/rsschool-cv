@@ -9,9 +9,9 @@
 
 	<body>
 		<div class="wrapper">
-			<div class="splash-screen">
+			<!-- <div class="splash-screen">
 				<span class="splash-screen__text">flinski</span>
-			</div>
+			</div> -->
 			<header class="header">
 				<div class="header__container container">
 					<div class="header__body">
@@ -330,7 +330,11 @@ export default defineConfig(({ command, mode, isSsrBuild, isPreview }) => {
 							<div class="projects__wrapper">
 								<ul class="projects__list">
 									<li class="projects__item">
-										<a class="projects__link" href="#">
+										<a
+											class="projects__link"
+											href="https://flinski.github.io/kropp-fitness/"
+											target="_blank"
+										>
 											<img
 												class="projects__image"
 												src="./src/assets/images/projects/fitness.jpg"
@@ -343,7 +347,11 @@ export default defineConfig(({ command, mode, isSsrBuild, isPreview }) => {
 										</a>
 									</li>
 									<li class="projects__item">
-										<a class="projects__link" href="#">
+										<a
+											class="projects__link"
+											href="https://flinski.github.io/todo-app/"
+											target="_blank"
+										>
 											<img
 												class="projects__image"
 												src="./src/assets/images/projects/todo.jpg"
@@ -352,11 +360,15 @@ export default defineConfig(({ command, mode, isSsrBuild, isPreview }) => {
 												height="591"
 												loading="lazy"
 											/>
-											<div class="projects__name">Task list</div>
+											<div class="projects__name">Todo list</div>
 										</a>
 									</li>
 									<li class="projects__item">
-										<a class="projects__link" href="#">
+										<a
+											class="projects__link"
+											href="https://flinski.github.io/bankist/"
+											target="_blank"
+										>
 											<img
 												class="projects__image"
 												src="./src/assets/images/projects/bankist.jpg"
@@ -369,7 +381,11 @@ export default defineConfig(({ command, mode, isSsrBuild, isPreview }) => {
 										</a>
 									</li>
 									<li class="projects__item">
-										<a class="projects__link" href="#">
+										<a
+											class="projects__link"
+											href="https://flinski.github.io/mapty-app/"
+											target="_blank"
+										>
 											<img
 												class="projects__image"
 												src="./src/assets/images/projects/mapty.jpg"
@@ -397,31 +413,25 @@ export default defineConfig(({ command, mode, isSsrBuild, isPreview }) => {
 								<li class="education__item">
 									<div class="education__card">
 										<div class="education__title">W3Schools</div>
-										<a class="education__link" href="#" target="_blank">Follow the link →</a>
+										<a class="education__link" href="https://www.w3schools.com/" target="_blank"
+											>Follow the link →</a
+										>
 									</div>
 								</li>
 								<li class="education__item">
 									<div class="education__card">
-										<div class="education__title">JavaScript.info</div>
-										<a class="education__link" href="#" target="_blank">Follow the link →</a>
-									</div>
-								</li>
-								<li class="education__item">
-									<div class="education__card">
-										<div class="education__title">Udemy</div>
-										<a class="education__link" href="#" target="_blank">Follow the link →</a>
+										<div class="education__title">JavaScript Info</div>
+										<a class="education__link" href="https://javascript.info/" target="_blank"
+											>Follow the link →</a
+										>
 									</div>
 								</li>
 								<li class="education__item">
 									<div class="education__card">
 										<div class="education__title">RS School</div>
-										<a class="education__link" href="#" target="_blank">Follow the link →</a>
-									</div>
-								</li>
-								<li class="education__item">
-									<div class="education__card">
-										<div class="education__title">Hogwarts School</div>
-										<a class="education__link" href="#" target="_blank">Follow the link →</a>
+										<a class="education__link" href="https://rs.school/" target="_blank"
+											>Follow the link →</a
+										>
 									</div>
 								</li>
 							</ul>
@@ -471,7 +481,12 @@ export default defineConfig(({ command, mode, isSsrBuild, isPreview }) => {
 								<div class="footer__year">2024</div>
 							</div>
 							<div class="footer__item">
-								<div class="footer__dev">made with ♥ by flinski</div>
+								<div class="footer__dev">
+									made with ♥ by
+									<a class="footer__github" href="https://github.com/flinski" target="_blank"
+										>flinski</a
+									>
+								</div>
 							</div>
 							<div class="footer__item">
 								<a
