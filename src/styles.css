@@ -246,6 +246,10 @@ p {
 }
 
 .toggle-theme {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
   height: var(--button-height);
   aspect-ratio: 1;
   color: var(--color-text-dim);
@@ -256,8 +260,20 @@ p {
   color: var(--color-text);
   background-color: var(--color-glass);
 }
+.toggle-theme:hover svg *[fill] {
+  fill: var(--color-text);
+}
+.toggle-theme:hover svg *[stroke] {
+  stroke: var(--color-text);
+}
 .toggle-theme:active {
   scale: 0.95;
+}
+.toggle-theme svg *[fill] {
+  fill: var(--color-text-dim);
+}
+.toggle-theme svg *[stroke] {
+  stroke: var(--color-text-dim);
 }
 
 .section {
