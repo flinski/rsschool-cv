@@ -1,5 +1,30 @@
 'use strict'
 
+// ===========================================================
+// splash screen
+// ===========================================================
+
+const splashScreen = document.querySelector('.splash-screen')
+const splashScreenText = document.querySelector('.splash-screen__text')
+
+window.addEventListener('DOMContentLoaded', () => {
+	setTimeout(() => {
+		splashScreenText.classList.add('on')
+
+		setTimeout(() => {
+			splashScreenText.classList.add('off')
+
+			setTimeout(() => {
+				splashScreen.classList.add('off')
+			}, 1000)
+		}, 2000)
+	}, 0)
+})
+
+// ===========================================================
+// scroll
+// ===========================================================
+
 const navButtons = document.querySelectorAll('.header__button')
 const header = document.querySelector('.header')
 
@@ -30,3 +55,5 @@ navButtons.forEach((navButton) => {
 		})
 	})
 })
+
+// ===========================================================
