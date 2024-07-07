@@ -76,6 +76,18 @@
   --color-glass: hsl(240 7 50 / 0.1);
   --color-text: hsl(0 0 100 / 0.9);
   --color-text-dim: hsl(0 0 100 / 0.6);
+  --code-red-dark: #f97583;
+  --code-red-light: #d73a49;
+  --code-purple-dark: #B392F0;
+  --code-purple-light: #6F42C1;
+  --code-orange-dark: #FFAB70;
+  --code-orange-light: #E36209;
+  --code-blue-dark: #79B8FF;
+  --code-blue-light: #005CC5;
+  --code-green-dark: #92F092;
+  --code-green-light: #42C142;
+  --code-yellow-dark: #F0E092;
+  --code-yellow-light: #C1AC42;
   --border-radius: 0.5rem;
   --font-family: "Inter", system-ui, "Segoe UI", Roboto, Helvetica, Arial, sans-serif,
   	"Apple Color Emoji", "Segoe UI Emoji", sans-serif;
@@ -263,6 +275,30 @@ p {
 .splash-screen__text.off {
   opacity: 0;
   transition: all 0.5s ease 0s;
+}
+
+.red {
+  color: var(--code-red-dark);
+}
+
+.purple {
+  color: var(--code-purple-dark);
+}
+
+.orange {
+  color: var(--code-orange-dark);
+}
+
+.blue {
+  color: var(--code-blue-dark);
+}
+
+.green {
+  color: var(--code-green-dark);
+}
+
+.yellow {
+  color: var(--code-yellow-dark);
 }
 
 .button {
@@ -461,10 +497,7 @@ p {
   display: flex;
 }
 .code__code {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-size: 0.875rem;
+  font-size: 1rem;
   line-height: 1.75;
 }
 

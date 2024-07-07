@@ -325,17 +325,21 @@
 								<div class="code__field-body">
 									<pre class="code__code-wrapper">
 										<code class="code__code">
-export default defineConfig(({ command, mode, isSsrBuild, isPreview }) => {
-  if (command === 'serve') {
-    return {
-      // dev specific config
-    }
-  } else {
-    // command === 'build'
-    return {
-      // build specific config
-    }
-  }
+navButtons.<span class="purple">forEach</span>((<span class="orange">navButton</span>) <span class="red">=></span> {
+  <span class="red">const</span> id <span class="red">=</span> <span class="orange">navButton</span>.<span class="purple">getAttribute</span>(<span class="green">'href'</span>).<span class="purple">slice</span>(<span class="yellow">1</span>)
+
+  <span class="orange">navButton</span>.<span class="purple">addEventListener</span>(<span class="green">'click'</span>, (<span class="orange">e</span>) <span class="red">=></span> {
+    <span class="orange">e</span>.<span class="purple">preventDefault</span>()
+
+    <span class="red">const</span> section <span class="red">=</span> document.<span class="purple">getElementById</span>(id)
+    <span class="red">const</span> coords <span class="red">=</span> <span class="purple">getCoords</span>(section)
+
+    window.<span class="purple">scrollTo</span>({
+      <span class="blue">top</span>: coords.<span class="blue">top</span> <span class="red">-</span> header.<span class="blue">offsetHeight</span>,
+      <span class="blue">left</span>: <span class="yellow">0</span>,
+      <span class="blue">behavior</span>: <span class="green">'smooth'</span>,
+    })
+  })
 })
 										</code>
 									</pre>

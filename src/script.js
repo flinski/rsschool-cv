@@ -29,7 +29,7 @@ const navButtons = document.querySelectorAll('.header__button')
 const header = document.querySelector('.header')
 
 function getCoords(elem) {
-	let rect = elem.getBoundingClientRect()
+	const rect = elem.getBoundingClientRect()
 
 	return {
 		top: rect.top + window.scrollY,
