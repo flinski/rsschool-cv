@@ -178,14 +178,7 @@ body {
   line-height: 1.75;
   color: var(--color-text);
   background-color: var(--color-background);
-}
-
-a,
-button,
-input,
-textarea,
-svg * {
-  transition-duration: var(--transition-duration);
+  transition: background-color 0.5s ease 0s;
 }
 
 a {
@@ -215,6 +208,7 @@ h2 {
   line-height: 1.333;
   text-transform: capitalize;
   margin-bottom: 1rem;
+  transition: color var(--transition-duration) ease 0s;
 }
 
 h1 {
@@ -228,6 +222,7 @@ h2 {
 p {
   font-size: clamp(1rem, 1rem + 0vw, 1rem);
   margin-block: 1rem;
+  transition: color var(--transition-duration) ease 0s;
 }
 
 .wrapper {
@@ -313,6 +308,7 @@ p {
   color: var(--color-text);
   border: 1px solid var(--color-glass);
   border-radius: var(--border-radius);
+  transition: all var(--transition-duration) ease 0s;
 }
 .toggle-theme:hover {
   color: var(--color-text);
@@ -348,6 +344,7 @@ p {
   background-color: var(--color-shade);
   border: 0.0625rem solid var(--color-glass);
   backdrop-filter: blur(20px);
+  transition: background-color 0.5s ease 0s;
 }
 .header__body {
   display: flex;
@@ -390,6 +387,7 @@ p {
 }
 .header__button {
   color: var(--color-text);
+  transition: all var(--transition-duration) ease 0s;
 }
 .header__button:hover {
   color: var(--color-accent);
@@ -404,11 +402,18 @@ p {
   align-items: center;
   gap: 5.3125rem;
 }
+.hero__heading {
+  transition: color var(--transition-duration) ease 0s;
+}
 .hero__description {
   display: inline-block;
   font-weight: 500;
   color: var(--color-text);
   margin-bottom: 0.5rem;
+  transition: color var(--transition-duration) ease 0s;
+}
+.hero__summary {
+  transition: color var(--transition-duration) ease 0s;
 }
 .hero__contacts {
   display: flex;
@@ -424,6 +429,7 @@ p {
   aspect-ratio: 1;
   border: 0.0625rem solid var(--color-glass);
   border-radius: var(--border-radius);
+  transition: all var(--transition-duration) ease 0s;
 }
 .hero__link:hover {
   background-color: var(--color-glass);
@@ -439,9 +445,11 @@ p {
 }
 .hero__link svg *[stroke] {
   stroke: var(--color-text);
+  transition: all var(--transition-duration) ease 0s;
 }
 .hero__link svg *[fill] {
   fill: var(--color-text);
+  transition: all var(--transition-duration) ease 0s;
 }
 .hero__image-wrapper {
   flex: 0 0 9.375rem;
@@ -471,6 +479,7 @@ p {
 .skills__button {
   cursor: default;
   border: 0.0625rem solid var(--color-glass);
+  transition: all var(--transition-duration) ease 0s;
 }
 .skills__button:hover {
   background-color: var(--color-glass);
@@ -517,6 +526,7 @@ p {
   line-height: 1.75;
   margin-right: 3.75rem;
   color: var(--color-text-dim);
+  transition: all var(--transition-duration) ease 0s;
 }
 .code__field-body {
   margin-top: -12px;
@@ -528,6 +538,7 @@ p {
 .code__code {
   font-size: clamp(0.5625rem, 0.2045454545rem + 1.5909090909vw, 1rem);
   line-height: 1.75;
+  transition: all var(--transition-duration) ease 0s;
 }
 
 .projects__list {
@@ -605,7 +616,7 @@ p {
   border-radius: var(--border-radius);
   padding: 1rem;
   overflow: hidden;
-  transition-duration: var(--transition-duration);
+  transition: all var(--transition-duration) ease 0s;
 }
 .education__card:hover {
   background-color: var(--color-glass);
@@ -645,9 +656,11 @@ p {
 .languages__name {
   font-size: 1.25rem;
   font-weight: 600;
+  transition: all var(--transition-duration) ease 0s;
 }
 .languages__level {
   font-size: 0.875rem;
+  transition: all var(--transition-duration) ease 0s;
 }
 .languages__image {
   position: absolute;
@@ -680,10 +693,19 @@ p {
 .footer__item:has(.footer__dev) {
   flex: 1 1 auto;
 }
+.footer__year {
+  transition: all var(--transition-duration) ease 0s;
+}
+.footer__dev {
+  transition: all var(--transition-duration) ease 0s;
+}
 @media (max-width: 30em) {
   .footer__text {
     display: none;
   }
+}
+.footer__github {
+  transition: all var(--transition-duration) ease 0s;
 }
 .footer__github:hover {
   color: var(--color-accent);
@@ -695,9 +717,11 @@ p {
 }
 .footer__rs-school svg *[fill] {
   fill: var(--color-text);
+  transition: all var(--transition-duration) ease 0s;
 }
 .footer__rs-school svg *[stroke] {
   stroke: var(--color-text);
+  transition: all var(--transition-duration) ease 0s;
 }
 .footer__rs-school:hover svg *[fill] {
   fill: var(--color-accent);
