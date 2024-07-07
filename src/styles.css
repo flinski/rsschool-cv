@@ -696,7 +696,7 @@ p {
 .footer__year {
   transition: all var(--transition-duration) ease 0s;
 }
-.footer__dev {
+.footer__text {
   transition: all var(--transition-duration) ease 0s;
 }
 @media (max-width: 30em) {
